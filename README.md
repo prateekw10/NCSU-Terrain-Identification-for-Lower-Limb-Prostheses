@@ -1,5 +1,11 @@
 # NCSU-Terrain-Prediction-for-Lower-Limb-Prostheses
 
+- The aim of the project is to be able to accurately identify the terrain based on the data streams from the inertial measurement unit (IMU) present on a lower limb prosthetic device.
+- The dataset consists of IMU data from sensors attached to the lower limbs prostheses which consists of spatial data (xyz) from the accelerometer and the gyro sensor sampled at 40 Hz. The label data sampled at 10 Hz representing four classes of the terrain.
+- Since the provided dataset has different sampling frequencies for the spatial data and labels, upsampling of feature data was done to match the timestamps of the label data.
+- It was observed that there was significant imbalance between the terrain class distribution which was treated to promote generalization and reduce the chances of overfitting.
+- Finally, a CNN and LSTM model is implemented to observe high validation accuracy and used to generate test data predictions.
+
 Here is a brief description of the data:
 
   - "_x" files contain the xyz accelerometers and xyz gyroscope measurements from the lower limb.
